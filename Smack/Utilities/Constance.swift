@@ -26,7 +26,13 @@ let TOKEN_KEY = "token"
 let LOGGED_IN = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+// MARK: Notifications
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+
 // MARK: Headers
 let HEADER = [
     "Content-Type" : "applictaion/json; charser = utf-8"
 ]
+
+// MARK: Colors
+let SMACK_PLACEHOLDER = #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 0.5016415836)
