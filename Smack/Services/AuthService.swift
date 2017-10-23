@@ -68,6 +68,8 @@ class AuthService {
             "password": password
         ]
         
+//        let modified_headers = HEADER
+        
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 
@@ -91,7 +93,10 @@ class AuthService {
                 completion(true)
             } else {
                 completion(false)
-                debugPrint(response.result.error as Any)
+//                debugPrint(response.result.error as Any)
+//                let responseData = String(data: response.data!, encoding: String.Encoding.utf8)
+//                debugPrint(responseData as! String)
+
             }
         }
     }

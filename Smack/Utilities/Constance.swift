@@ -31,7 +31,7 @@ let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
 
 // MARK: Headers
 let HEADER = [
-    "Content-Type" : "applictaion/json; charser = utf-8"
+    "Content-Type" : "application/json; charset=utf-8"
 ]
 
 // MARK: Colors

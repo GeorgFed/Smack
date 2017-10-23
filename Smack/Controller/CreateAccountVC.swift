@@ -43,15 +43,23 @@ class CreateAccountVC: UIViewController {
         guard let email = emailTxt.text, emailTxt.text != "" else {return}
         guard let pass = passwordTxt.text, passwordTxt.text != "" else {return}
         
-//        spinner.isHidden = false
-//        spinner.startAnimating()
+//        let name = "Egor"
+//        let email = "j@j.com"
+//        let pass = "123456"
+        
+        
+        spinner.isHidden = false
+        spinner.startAnimating()
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if (success) {
+                print("\n\n user registered")
                 AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
                     if success {
+                        print("\n\n user logged in")
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if (success) {
+                                print("\n\n user created")
                                 self.spinner.isHidden = true
                                 self.spinner.stopAnimating()
                                 
@@ -75,6 +83,7 @@ class CreateAccountVC: UIViewController {
         let g = CGFloat(arc4random_uniform(255)) / 255
         let b = CGFloat(arc4random_uniform(255)) / 255
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        avatarColor = "[\(r), \(g), \(b), 1]"
         UIView.animate(withDuration: 0.2) {
         self.profileImg.backgroundColor = self.bgColor
         }
