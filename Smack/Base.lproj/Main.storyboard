@@ -99,6 +99,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY5-qB-HdQ">
                                 <rect key="frame" x="316" y="93" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="7gI-Vm-8s2" eventType="touchUpInside" id="ocB-yV-Vyt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91584271192550659" green="0.63177728652954102" blue="0.51078635454177856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
