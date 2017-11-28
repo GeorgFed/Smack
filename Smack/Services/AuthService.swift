@@ -93,9 +93,10 @@ class AuthService {
                 completion(true)
             } else {
                 completion(false)
-//                debugPrint(response.result.error as Any)
-//                let responseData = String(data: response.data!, encoding: String.Encoding.utf8)
-//                debugPrint(responseData as! String)
+                debugPrint(response.result.error as Any)
+                
+                let responseData = String(data: response.data!, encoding: String.Encoding.utf8)
+                debugPrint(responseData as? String)
 
             }
         }
